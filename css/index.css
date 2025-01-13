@@ -1,5 +1,4 @@
-@import "global.css";
-@import "controls.css";
-@import "index.header.css";
-@import "index.products.css";
-@import "index.footer.css";
+@import "./global.css";
+@import "./controls.css";
+@import "./index.header.css";
+@import "./index.products.css";

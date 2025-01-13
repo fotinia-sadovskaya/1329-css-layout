@@ -1,14 +1,14 @@
 .button {
-  display: inline-block;
-  background-color: var(--accent-color);
-  padding: 5px 15px;
-  border-radius: 5px;
-  border: 1px solid var(--border-color);
-  text-align: center;
-  color: var(--text-color);
-  text-decoration: none;
+    display: inline-block;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
 
-  &:hover {
-    text-decoration: underline;
-  }
+    &:hover {
+        text-decoration: underline;
+    }
 }
