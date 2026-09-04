@@ -1,0 +1,174 @@
+.product-page {
+
+    .header__banner {
+        display: none !important;
+    }
+
+    .product {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 10px;
+
+        .product__left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .product__image {
+                width: 100%;
+                max-width: 360px;
+                margin-bottom: 15px;
+            }
+
+            .product__title {
+                font-size: 28px;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+        }
+
+        .product__right {
+
+            .product__description {
+                margin-bottom: 20px;
+            }
+
+            .product__price {
+                margin-bottom: 20px;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .product__actions {
+                display: flex;
+                gap: 10px;
+
+                .button {
+                    &.ripple {
+                        position: relative;
+                        overflow: hidden;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background: rgba(255, 255, 255, 0.5);
+                            border-radius: 50%;
+                            transform: scale(0);
+                            width: 100px;
+                            height: 100px;
+                            opacity: 0;
+                            pointer-events: none;
+                        }
+
+                        &:active::after {
+                            animation: rippleEffect 0.4s ease-out;
+                        }
+                    }
+
+                    &.btn-press {
+                        transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 640px) {
+        .product {
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+
+            .product__left {
+                align-items: flex-start;
+
+                .product__image {
+                    max-width: 420px;
+                }
+
+                .product__title {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 960px) {
+        .product {
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+
+            .product__left {
+                .product__image {
+                    max-width: 480px;
+                }
+
+                .product__title {
+                    font-size: 32px;
+                }
+            }
+
+            .product__right {
+                font-size: 18px;
+
+                .product__price {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .product {
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding: 40px 10px;
+
+            .product__left {
+                .product__image {
+                    max-width: 520px;
+                }
+
+                .product__title {
+                    font-size: 34px;
+                }
+            }
+
+            .product__right {
+
+                .product__price {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+
+    .fade-in {
+        animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes rippleEffect {
+        from {
+            opacity: 0.6;
+            transform: scale(0);
+        }
+
+        to {
+            opacity: 0;
+            transform: scale(3);
+        }
+    }
+}

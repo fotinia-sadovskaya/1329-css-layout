@@ -3,6 +3,27 @@
     opacity: 0;
     transform: translateY(10px);
     animation: fadeInHeader 0.9s ease forwards;
+
+    .footer__contacts {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        input {
+            height: 32px;
+            /* така ж висота, як кнопка */
+            padding: 0 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: "DotGothic16", serif;
+        }
+
+        button {
+            /* кнопка вже має правильну висоту через padding */
+            padding: 5px 15px;
+        }
+    }
 }
 
 @keyframes fadeInHeader {

@@ -17,6 +17,16 @@
             .products__description {
                 margin-bottom: 10px;
             }
+
+            .products__button {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                height: 32px;
+                padding: 0 15px;
+                line-height: 1;
+
+            }
         }
     }
 

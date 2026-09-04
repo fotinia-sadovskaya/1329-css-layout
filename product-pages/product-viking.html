@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viking – Stickerz</title>
+
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/product.css">
+
+    <script src="https://unpkg.com/htmx.org@1.9.10"
+        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="product-page">
+
+    <header data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="../index.header.partial.html"></header>
+
+    <main class="product container fade-in">
+
+        <div class="product__left">
+            <img src="../img/viking.svg" alt="Viking Sticker" class="product__image">
+        </div>
+
+        <div class="product__right">
+            <h2 class="product__title">Viking Sticker</h2>
+
+            <p class="product__description">
+                A bold and powerful Viking sticker for fans of mythology, warriors and epic adventures.
+                <br><br>
+                Made from premium matte vinyl, this sticker is durable, weather‑resistant and scratch‑proof.
+                Perfect for laptops, bottles, helmets, notebooks, phone cases and gifts.
+                <br><br>
+                <strong>Features:</strong><br>
+                • Size: 7×7 cm<br>
+                • Material: Premium matte vinyl<br>
+                • Durability: 3–5 years<br>
+                • Weather‑resistant<br>
+                • Smooth, clean finish<br>
+            </p>
+
+            <p class="product__price">$6.49</p>
+
+            <div class="product__actions">
+                <button class="button button-card ripple" onclick="addToCart('Viking', '../img/viking.svg', 6.49)">
+                    Buy
+                </button>
+
+                <a href="../index.html#products" class="button button-card ripple">
+                    Back to Products
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="../js/cart-add.js"></script>
+    <script src="../js/ripple.js"></script>
+</body>
+
+</html>
