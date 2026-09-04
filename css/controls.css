@@ -7,8 +7,19 @@
     background-color: var(--accent-color);
     color: var(--text-color);
     border: 1px solid var(--border-color);
+    font-family: "DotGothic16", serif;
+    cursor: pointer;
+    transition: transform 0.1s ease;
 
     &:hover {
         text-decoration: underline;
+        transform: scale(1.05);
+        opacity: 0.85;
     }
+
+    &:active {
+        transform: scale(0.9);
+        transition: transform 0.05s ease-out;
+    }
+
 }

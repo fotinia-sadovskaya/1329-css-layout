@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
     <link rel="stylesheet" href="css/cart.css">
+
+    <script src="https://unpkg.com/htmx.org@1.9.10"
+        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+        crossorigin="anonymous"></script>
 </head>
-<body>
-    <header data-include="header.partial.html"></header>
-    <div>Cart Content</div>
-    <script src="https://unpkg.com/html-data-include@1.1.1/html-data-include.js"></script>
+
+<body class="cart-page">
+
+    <header data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.header.partial.html">
+    </header>
+
+    <main>
+        <section class="cart container">
+            <h2 class="cart__title">Your Cart</h2>
+
+            <div class="cart__content">
+                <p>Your cart is currently empty.</p>
+            </div>
+
+            <div class="cart-total"></div>
+
+            <div class="cart__actions">
+                <a href="index.html#products" class="button button-card">Back to Products</a>
+                <button class="button button-card" onclick="clearCart()">Clear Cart</button>
+                <button class="button button-card" onclick="checkout()">Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="contacts"></div>
+    <footer data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.footer.partial.html">
+    </footer>
+    <script src="js/cart-page.js"></script>
 </body>
+
 </html>

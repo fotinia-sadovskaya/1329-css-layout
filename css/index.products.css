@@ -1,10 +1,10 @@
 .products {
-    padding: 0 5px;
+    padding: 10px 5px;
 
     .products__list {
         display: grid;
         gap: 5px;
-        
+
         .products__item {
             border: 1px solid var(--border-color);
             padding: 5px;
@@ -13,6 +13,10 @@
                 width: 80%;
                 margin: auto;
             }
+
+            .products__description {
+                margin-bottom: 10px;
+            }
         }
     }
 
@@ -20,14 +24,14 @@
         .products__list {
             grid-template-columns: 1fr 1fr;
         }
-        
+
     }
 
     @media (min-width: 960px) {
         .products__list {
             grid-template-columns: 1fr 1fr 1fr;
         }
-        
+
     }
 
     @media (min-width: 1200px) {

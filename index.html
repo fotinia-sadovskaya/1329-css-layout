@@ -8,15 +8,25 @@
   <title>Stickerz</title>
   <link rel="shortcut icon" href="img/baby-yoda.svg" type="image/x-icon">
   <link rel="stylesheet" href="css/index.css">
-  <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/htmx.org@1.9.10"
+    integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+    crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="home-page">
   <header data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.header.partial.html"></header>
+
   <main>
-    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.products.partial.html"></section>
+    <section id="products" data-hx-trigger="load" data-hx-get="index.products.partial.html" data-hx-swap="innerHTML">
+    </section>
+
+    <section id="contacts" data-hx-trigger="load" data-hx-get="index.contacts.partial.html" data-hx-swap="innerHTML">
+    </section>
   </main>
+
   <footer data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.footer.partial.html"></footer>
+
+  <script src="js/cart-add.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,87 @@
+.cart {
+    padding: 20px 10px;
+}
+
+.cart__title {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.cart__content {
+    margin-bottom: 20px;
+}
+
+.cart__actions {
+    margin-top: 10px;
+}
+
+.cart-page .header__banner {
+    display: none !important;
+}
+
+.cart-page .menu__item--cart {
+    font-weight: bold;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    opacity: 0;
+    transform: translateY(10px);
+    animation: cartItemFade 0.9s ease forwards;
+}
+
+@keyframes cartItemFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cart-item-remove {
+    animation: cartItemFadeOut 0.9s ease forwards;
+}
+
+@keyframes cartItemFadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(20px);
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.cart-empty {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: cartEmptyFade 0.9s ease forwards;
+}
+
+@keyframes cartEmptyFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cart-item__img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.cart__actions {
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+}
+
+.cart__actions .button-card {
+    min-width: 150px;
+    text-align: center;
+}
